@@ -1,0 +1,183 @@
+/* --- Clean Light Theme --- */
+
+/* 1. Root Variables for Easy Customization */
+:root {
+    --bg-color: #ffffff;           /* Clean white background */
+    --card-bg-color: #f9f9f9;       /* Very light grey for cards */
+    --accent-color: #007bff;       /* A professional, vibrant blue */
+    --primary-text-color: #212529;  /* Dark, readable text */
+    --secondary-text-color: #6c757d;/* Muted grey for meta info */
+    --border-color: #dee2e6;
+    --header-bg-color: #ffffff;
+    --font-heading: 'Fira Code', monospace; /* New font for headings */
+    --font-body: 'Inter', sans-serif;       /* New font for body text */
+}
+
+/* 2. General Styling */
+body {
+    font-family: var(--font-body);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: var(--bg-color);
+    color: var(--primary-text-color);
+}
+
+.container {
+    width: 85%;
+    max-width: 900px;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* 3. Header and Navigation */
+header {
+    background: var(--header-bg-color);
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 30px;
+}
+
+header a {
+    color: var(--primary-text-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+header a:hover {
+    color: var(--accent-color);
+}
+
+header .logo h1 {
+    margin: 0;
+    float: left;
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    color: var(--accent-color);
+    /* --- Makes the heading text bold --- */
+    font-weight: 700;
+}
+
+header nav {
+    float: right;
+    margin-top: 10px;
+}
+
+header nav ul li {
+    display: inline;
+    padding: 0 15px;
+    /* --- Makes the navigation text bold --- */
+    font-weight: 700;
+}
+
+/* 4. Post Styling */
+.post {
+    background: var(--card-bg-color);
+    padding: 30px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+/* --- Styling for all Headings (h1, h2) --- */
+.post h1, .post h2 {
+    font-family: var(--font-heading); /* Use the new heading font */
+    color: var(--primary-text-color);
+    margin-top: 0;
+    /* --- Makes the heading text bold --- */
+    font-weight: 700;
+}
+
+.post h2 a {
+    text-decoration: none;
+    color: var(--primary-text-color);
+    transition: color 0.3s ease;
+}
+
+.post h2 a:hover {
+    color: var(--accent-color);
+}
+
+.post-meta {
+    font-size: 0.9em;
+    color: var(--secondary-text-color);
+    margin-bottom: 20px;
+}
+
+.post-meta a {
+    color: var(--secondary-text-color);
+    text-decoration: none;
+    font-weight: 700; /* Bold category link */
+}
+.post-meta a:hover {
+    color: var(--accent-color);
+}
+
+.post a.read-more {
+    display: inline-block;
+    background: var(--accent-color);
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 18px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.post a.read-more:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+
+/* 5. Forms and Buttons */
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 700; /* Bold form labels */
+    color: var(--secondary-text-color);
+}
+
+.form-group input, .form-group textarea, .form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    background-color: #fff;
+    color: var(--primary-text-color);
+    font-size: 1rem;
+}
+
+.btn, .search-bar button {
+    background: var(--accent-color);
+    color: #fff;
+    font-weight: bold;
+    padding: 12px 22px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover, .search-bar button:hover {
+    background: #0056b3; /* Darker blue on hover */
+}
+
+/* 6. Responsive Design */
+@media(max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+    header .logo, header nav, .search-bar {
+        float: none;
+        text-align: center;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    header nav ul li {
+        display: block;
+        padding: 10px 0;
+    }
+}
